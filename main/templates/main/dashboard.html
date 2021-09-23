@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
+    <title>{{user}}</title>
+</head>
+<body>
+    <section class="main_container">
+        <ol class="todos_container">
+            {% for to_do in to_dos %}
+                <li class="to_dos_elements">
+                    <h3>{{to_do.title}}</h3>
+                    <p>{{to_do.to_do}}</p>
+                    <p>{{to_do.date}}</p>
+
+                    <form method="POST" action="{% url 'Delete' to_do.user_name password to_do.id %}" class="delete_form">
+                        {% csrf_token %}
+                        <input type="submit" value="delete" class="delete_btn">
+                    </form>
+                </li>
+            {% endfor %}
+        </ol>
+
+        <form method="POST" class="add_todos_form">
+            {% csrf_token %}
+            <input type="text" placeholder="title" name="title" class="title_selection">
+            <textarea placeholder="content" name="content" class="content_selection"></textarea>
+            <input type="submit" class="add_btn" value="add">
+        </form>
+
+    </section>
+</body>
+</html>

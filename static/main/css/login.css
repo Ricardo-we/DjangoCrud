@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-size: 15px;
+}
+
+.main_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 30rem;
+    height: 16rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.form h2{   
+    width: 95%;
+    text-align: center;
+    color:white;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--special-blue);
+}
+
+.container_input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container_input input{
+    width: 80%; 
+    font-size: var(--input-font-size);
+    background-color: white;
+    border: none;
+
+}
+
+.container_input label{
+    width: 20%;
+    font-size: var(--input-font-size);
+    font-weight: bolder;
+    margin-right: 1rem;
+}
+.form input[type=submit]{
+    width: 100%;
+    background-color: var(--special-blue); 
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-weight: bolder;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+}
+
+.login_signup{
+    color: black;    
+}
+
+:root{
+    --special-blue: rgb(41, 120, 238);
+    --input-font-size: 1.4rem;
+}
+

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/login.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    <a href="{% url 'Sign_up' %}" class="login_signup">Sign up</a>
+    <section class="main_container">
+        <form action="check_user" method="POST" class="form">
+            {% csrf_token %}
+            
+            {% if valid == 'failed' %}
+                <h2 style="background-color: red;">Password or username incorrect</h2>
+            {% else %}
+                <h2>To-do online</h2>
+            {% endif %}
+
+            <div class="container_input">
+                <label for="">username: </label>
+                <input type="text" name="user_name" placeholder="username">
+            </div>
+            <div class="container_input">
+                <label for="">password: </label>
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <input type="submit" value="Log in">        
+        </form>
+    </section>
+
+</body>
+</html>
