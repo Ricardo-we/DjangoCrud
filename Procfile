@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn ChatOnline.wsgi --log-file -
+web: gunicorn Django_crud.wsgi --log-file -
