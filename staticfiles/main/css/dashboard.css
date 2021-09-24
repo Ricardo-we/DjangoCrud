@@ -19,7 +19,7 @@ html{
 
 .todos_container{
     margin: 0;
-    width: 43rem;
+    width: 50rem;
     height: 40rem;
     overflow: scroll;
     display: flex;
