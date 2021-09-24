@@ -28,7 +28,8 @@ html{
 
 .to_dos_elements{
     word-wrap: break-word;
-    width: 98%;
+    width: 40rem;
+    display: inline-block;
 }
 
 .to_dos_elements h3{
