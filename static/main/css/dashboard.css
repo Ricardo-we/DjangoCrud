@@ -30,6 +30,12 @@ html{
     word-wrap: break-word;
     width: 98%;
 }
+.to_dos_elements h2{
+    word-wrap: break-word; 
+}
+.to_dos_elements p{
+    word-wrap: break-word; 
+}
 
 .delete_form{
     display: flex;
